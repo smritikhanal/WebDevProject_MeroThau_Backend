@@ -24,6 +24,14 @@ const User = sequelize.define("User", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  profilePic: {
+    type: DataTypes.STRING,
+    allowNull: true,  // Allows NULL by default
+  },
+  address: {
+    type: DataTypes.STRING,
+    allowNull: true, // Allows NULL values for address
+  },
 }, {
   tableName: 'users', // Specify the name of the table in the database
   timestamps: true,   // Optional: if you want Sequelize to automatically add `createdAt` and `updatedAt` fields
